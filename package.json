@@ -37,6 +37,7 @@
     "gulp-rename": "^1.2.0",
     "gulp-ruby-sass": "^0.7.1",
     "gulp-size": "^1.1.0",
+    "gulp-svg-sprites": "^1.0.3",
     "gulp-uglify": "^1.0.1",
     "gulp-webserver": "~0.8.3",
     "grunt": "^0.4.1",

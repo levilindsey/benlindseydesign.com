@@ -42,6 +42,6 @@ config.vendorStylesSrc =
     [config.bowerPath + '/**/*.css', '!' + config.bowerPath + '/**/*.min.css'];
 
 config.buildTasks = ['scripts', 'styles', 'vendor-scripts', 'vendor-styles', 'templates',
-  'copy-index', 'copy-media', 'copy-device-icons', 'watch'];
+  'svg-icons', 'copy-index', 'copy-media', 'copy-device-icons', 'watch'];
 
 module.exports = config;
