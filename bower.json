@@ -1,0 +1,10 @@
+{
+  "name": "benlindseydesign.com",
+  "version": "0.0.0",
+  "description": "Personal website and portfolio for Ben Lindsey",
+  "private": false,
+  "dependencies": {
+    "angular": "~1.2.26",
+    "angular-ui-router": "~0.2.11"
+  }
+}
