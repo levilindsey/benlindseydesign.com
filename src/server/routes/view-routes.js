@@ -25,7 +25,7 @@ exports.init = function (server) {
  * @param {Object} res
  */
 function handleHomeRequest(req, res) {
-  res.sendfile(config.indexPath);
+  res.sendFile(config.indexPath);
 }
 
 /**
@@ -35,5 +35,5 @@ function handleHomeRequest(req, res) {
  * @param {Object} res
  */
 function handleInvalidRequest(req, res) {
-  res.status(404).render(config.pageMissingPath, {pageName: req.host + req.path});
+  res.status(404).render(config.pageMissingPath, {pageName: req.hostname + req.path});
 }
