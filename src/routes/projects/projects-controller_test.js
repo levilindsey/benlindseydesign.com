@@ -16,6 +16,6 @@ describe('Controller: ProjectsCtrl', function () {
   // ---  --- //
 
   it('should ...', function () {
-    expect().toBeDefined();
+    expect().toBeDefined();// TODO:
   });
 });

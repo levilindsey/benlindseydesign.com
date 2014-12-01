@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Directive: bld-nav-bar', function () {
+describe('Directive: bld-footer', function () {
 
   var $compile, $rootScope, element;
 
@@ -9,11 +9,11 @@ describe('Directive: bld-nav-bar', function () {
   beforeEach(inject(function (_$compile_, _$rootScope_) {
     $compile = _$compile_;
     $rootScope = _$rootScope_;
-    element = compileNavBar();
+    element = compileFooter();
   }));
 
-  function compileNavBar() {
-    var template = '<bld-nav-bar></bld-nav-bar>';
+  function compileFooter() {
+    var template = '<bld-footer></bld-footer>';
     var element = $compile(angular.element(template))($rootScope);
     $rootScope.$digest();
     return element;

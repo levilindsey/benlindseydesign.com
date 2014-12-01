@@ -5,20 +5,26 @@
     .run(run);
 
   function config($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/welcome');
 
     $stateProvider
-      .state('home', {
-        url: '/home',
-        templateUrl: 'routes/home/home.html',
-        controller: 'HomeCtrl',
-        controllerAs: 'home'
+      .state('projects', {
+        url: '/projects',
+        templateUrl: 'routes/projects/projects.html',
+        controller: 'ProjectsCtrl',
+        controllerAs: 'projects'
       })
-      .state('login', {
-        url: '/login',
-        templateUrl: 'routes/login/login.html',
-        controller: 'LoginCtrl',
-        controllerAs: 'login'
+      .state('welcome', {
+        url: '/welcome',
+        templateUrl: 'routes/welcome/welcome.html',
+        controller: 'WelcomeCtrl',
+        controllerAs: 'welcome'
+      })
+      .state('writings', {
+        url: '/writings',
+        templateUrl: 'routes/writings/writings.html',
+        controller: 'WritingsCtrl',
+        controllerAs: 'writings'
       });
   }
 

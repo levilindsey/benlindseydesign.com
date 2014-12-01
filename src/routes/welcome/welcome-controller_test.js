@@ -15,7 +15,7 @@ describe('Controller: WelcomeCtrl', function () {
 
   // ---  --- //
 
-  it('should attach appName to the controller object', function () {
-    expect(welcome.appName).toBeDefined();
+  it('should ...', function () {
+    expect().toBeDefined();// TODO:
   });
 });
