@@ -1,11 +1,11 @@
 // Karma configuration
 
 module.exports = function (config) {
-  var gulpConfig = require('../gulp/config');
+  var gulpConfig = require('./gulp/config');
 
   config.set({
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '../',
+    basePath: '',
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter

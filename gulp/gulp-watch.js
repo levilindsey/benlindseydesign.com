@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')({lazy: false});
 var config = require('./config');
-var gulpLiveReload = require('./gulp-live-reload');
 
 gulp.task('watch', config.buildTasks, function () {
   gulp.watch(config.scriptsSrc, ['scripts']);
@@ -14,7 +13,6 @@ gulp.task('watch', config.buildTasks, function () {
   gulp.watch(config.mediaSrc, ['copy-media']);
   gulp.watch(config.imagesSrc, ['compress-images']);
   gulp.watch(config.deviceIconsSrc, ['copy-device-icons']);
-  gulp.watch(config.distGlob, gulpLiveReload.notifyLiveReload);
 
   gulp.start('tdd');
 });
