@@ -1,21 +1,21 @@
 'use strict';
 
-describe('Controller: HomeCtrl', function () {
+describe('Controller: WelcomeCtrl', function () {
 
-  var home, scope;
+  var welcome, scope;
 
   beforeEach(module('bldApp'));
 
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    home = $controller('HomeCtrl', {
+    welcome = $controller('WelcomeCtrl', {
       $scope: scope
-    })
+    });
   }));
 
   // ---  --- //
 
   it('should attach appName to the controller object', function () {
-    expect(home.appName).toBeDefined();
+    expect(welcome.appName).toBeDefined();
   });
 });

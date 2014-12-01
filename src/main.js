@@ -15,6 +15,7 @@
 //  'bldSomeService',
 
     // Components
+    'bldLogoCircleDirective',
     'bldNavBarDirective',
     'bldSvgIconDirective',
     'bldToastDirective',
@@ -25,8 +26,9 @@
     'bldUserService',
 
     // Routes
-    'bldHomeController',
-    'bldLoginController'
+    'bldProjectsController',
+    'bldWelcomeController',
+    'bldWritingsController'
   ])
 
     .run(function ($rootScope) {

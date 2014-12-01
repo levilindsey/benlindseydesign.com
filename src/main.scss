@@ -22,10 +22,20 @@ $font-sizes: (
   xl: 32px,
 );
 
-//@font-face {
-//  font-family: font-name;
-//  src: url('../fonts/**');// TODO: add custom font
-//}
+@font-face {
+  font-family: 'Basque';
+  src: url('/fonts/basque-normal.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Basque';
+  src: url('/fonts/basque-bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@mixin helvetica-stack() {
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-weight: 300;
+}
 
 @function color($color-name) {
   @return map-get($colors, $color-name);
@@ -54,16 +64,23 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  @include helvetica-stack();
   color: color(black);
   background-color: color(white);
 }
 
+h1, h2, h3, h4, h5 {
+  text-align: center;
+  font-family: Basque, sans-serif;
+}
+
 // --- Include all partials --- //
 
+@import 'components/logo-circle/logo-circle';
 @import 'components/nav-bar/nav-bar';
 @import 'components/svg-icon/svg-icon';
 @import 'components/toast/toast';
 
-@import 'routes/home/home';
-@import 'routes/login/login';
+@import 'routes/projects/projects';
+@import 'routes/welcome/welcome';
+@import 'routes/writings/writings';
