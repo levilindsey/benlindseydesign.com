@@ -15,17 +15,21 @@
 //  'bldSomeService',
 
     // Components
+    'bldImageSliderDirective',
     'bldNavBarDirective',
     'bldSvgIconDirective',
+    'bldThumbnailGridDirective',
     'bldToastDirective',
     'bldToastService',
 
     // Models
-    'bldDataNameService',
-    'bldUserService',
+    'bldBlogEntryService',
+    'bldPostService',
 
     // Routes
+    'bldBlogPostController',
     'bldHomeController',
+    'bldProjectController',
     'bldLoginController'
   ])
 

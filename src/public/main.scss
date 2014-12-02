@@ -61,9 +61,13 @@ body {
 
 // --- Include all partials --- //
 
+@import 'components/image-slider/image-slider';
 @import 'components/nav-bar/nav-bar';
 @import 'components/svg-icon/svg-icon';
+@import 'components/thumbnail-grid/thumbnail-grid';
 @import 'components/toast/toast';
 
+@import 'routes/blog-post/blog-post';
 @import 'routes/home/home';
 @import 'routes/login/login';
+@import 'routes/project/project';
