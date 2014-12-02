@@ -1,0 +1,32 @@
+$nav-bar-height: 42px;
+$selected-tab-border-width: 4px;
+
+bld-nav-bar {
+  @include normal-shadow();
+  display: block;
+  height: $nav-bar-height + $selected-tab-border-width * 2;
+  line-height: $nav-bar-height;
+  padding-top: $selected-tab-border-width;
+  vertical-align: middle;
+  color: color(natural-2);
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  li {
+    margin: 0 20px;
+    padding: 0 8px;
+
+    font-size: font-size(l);
+  }
+
+  li.selected {
+    border-bottom: $selected-tab-border-width solid color(natural-5);
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,148 @@
+// --- Shared values --- //
+
+$colors: (
+  black: #000000,
+  white: #FFFFFF,
+
+  gray-1: #212121, // 87% opacity of black on white
+  gray-2: #727272, // 54% opacity of black on white
+  gray-3: #b8b8b8, // 26% opacity of black on white
+  gray-4: #dadada, // 12% opacity of black on white
+  gray-5: #f9f9f9,
+
+  blue-1: #2299EE,
+  blue-2: #77CCFF,
+
+  yellow-1: #D6AF00,
+  yellow-2: #FFE675,
+
+  natural-1: #748d2f,
+  natural-2: #be8727,
+  natural-3: #835913,
+  natural-4: #e2b844,
+  natural-5: #c1513c,
+
+  soft-1: #3d3c3e,
+  soft-2: #50505a,
+  soft-3: #5b5050,
+  soft-4: #a9cfd6,
+  soft-5: #f9b8bd,
+
+  formal-1: #64646e,
+  formal-2: #c8c8dc,
+  formal-3: #ec2426,
+  formal-4: #3d3c3e,
+  formal-5: #2c292a
+);
+
+$font-sizes: (
+  xs: 12px,
+  s: 14px,
+  m: 16px,
+  l: 22px,
+  xl: 32px,
+);
+
+@font-face {
+  font-family: 'Basque';
+  src: url('/fonts/basque-normal.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Basque';
+  src: url('/fonts/basque-bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@function font-size($size-name) {
+  @return map-get($font-sizes, $size-name);
+}
+
+@mixin helvetica-stack() {
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-weight: 300;
+}
+
+@mixin normal-shadow() {
+  box-shadow: 0 0 14px 0 rgba(color(gray-1), 0.3);
+}
+
+// --- General styles --- //
+
+ul, ol, dl, dd, dt, li, div, body, p, form, hr, h1, h2, h3, h4, h5, img, button {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+  width: 100%;
+}
+
+html {
+  font-size: font-size(m);
+  line-height: font-size(m);
+}
+
+body {
+  @include helvetica-stack();
+  padding: 80px 0 120px 0;
+  color: color(gray-1);
+  background-color: color(gray-5);
+}
+
+h1, h2, h3, h4, h5 {
+  text-align: center;
+  font-family: Basque, sans-serif;
+}
+
+a {
+  color: color(natural-1);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:visited {
+  color: color(natural-3);
+}
+a:hover {
+  color: color(natural-2);
+  text-decoration: underline;
+}
+a:active {
+  color: color(natural-5);
+  text-decoration: none;
+}
+
+#content-column {
+  max-width: 1000px;
+  margin: auto;
+}
+
+#route-view {
+  @include normal-shadow();
+  min-height: 700px;
+  margin-top: 30px;
+  padding: 40px;
+}
+
+// --- Include all partials --- //
+
+@import 'components/footer/footer';
+@import 'components/image-slider/image-slider';
+@import 'components/logo-circle/logo-circle';
+@import 'components/nav-bar/nav-bar';
+@import 'components/svg-icon/svg-icon';
+@import 'components/thumbnail-grid/thumbnail-grid';
+@import 'components/toast/toast';
+
+@import 'routes/blog-post/blog-post';
+@import 'routes/project/project';
+@import 'routes/projects/projects';
+@import 'routes/welcome/welcome';
+@import 'routes/writings/writings';
+
+

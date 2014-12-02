@@ -1,20 +1,30 @@
 var config = {};
 
 config.srcPath = 'src';
+config.dataPath = 'data';
 config.distPath = 'dist';
 config.resPath = 'res';
 config.bowerPath = 'bower_components';
-
-config.publicPath = config.srcPath + '/public';
-config.serverPath = '../' + config.srcPath + '/server';
 
 config.scriptsDist = config.distPath + '/scripts';
 config.stylesDist = config.distPath + '/styles';
 config.imageDist = config.distPath + '/images';
 
-config.serverMainPath = config.serverPath + '/main';
+config.projectDataPath = config.dataPath + '/projects';
+config.projectMetadataSrc = config.projectDataPath + '/**/metadata.json';
+config.projectCollectionMetadataSrc = config.projectDataPath + '/collection-metadata.json';
+config.injectedProjectMetadataDist = config.distPath + '/data';
+config.injectedProjectMetadataSrc = config.injectedProjectMetadataDist + '/**/*';
+config.combinedProjectDataFilePath = config.distPath + '/project-data.min.json';
 
-config.karmaConfigPath = config.srcPath + '/karma.conf.js';
+config.blogDataPath = config.dataPath + '/blog-entries';
+config.blogMetadataSrc = config.blogDataPath + '/**/metadata.json';
+config.blogCollectionMetadataSrc = config.blogDataPath + '/collection-metadata.json';
+config.injectedBlogMetadataDist = config.distPath + '/data';
+config.injectedBlogMetadataSrc = config.injectedBlogMetadataDist + '/**/*';
+config.combinedBlogDataFilePath = config.distPath + '/blog-data.min.json';
+
+config.karmaConfigPath = 'karma.conf.js';
 
 config.scriptDistFileName = 'benlindseydesign.com.js';
 config.vendorScriptDistFileName = 'lib.js';
@@ -24,8 +34,7 @@ config.angularTemplatesDistFileName = 'templates.js';
 config.distGlob = config.distPath + '/**';
 
 config.scriptsDistFilePath = config.scriptsDist + '/' + config.scriptDistFileName;
-config.frontEndTestsSrc = config.publicPath + '/**/*_test.js';
-config.backEndTestsSrc = config.serverPath + '/**/*_test.js';
+config.frontEndTestsSrc = config.srcPath + '/**/*_test.js';
 
 config.allFilesForFrontEndTests = [
   config.scriptsDist + '/' + config.vendorScriptDistFileName,
@@ -35,17 +44,16 @@ config.allFilesForFrontEndTests = [
   config.frontEndTestsSrc
 ];
 
-config.indexSrc = config.publicPath + '/index.html';
+config.indexSrc = config.srcPath + '/index.html';
 
 config.scriptsSrc = [
-  config.publicPath + '/**/*.js',
-  '!' + config.frontEndTestsSrc,
-  '!' + config.backEndTestsSrc
+  config.srcPath + '/**/*.js',
+  '!' + config.frontEndTestsSrc
 ];
-config.stylesPartialsSrc = config.publicPath + '/**/_*.scss';
-config.stylesMainSrc = config.publicPath + '/main.scss';
-config.stylesSrc = config.publicPath + '/**/*.scss';
-config.angularTemplatesSrc = [config.publicPath + '/**/*.html', '!' + config.indexSrc];
+config.stylesPartialsSrc = config.srcPath + '/**/_*.scss';
+config.stylesMainSrc = config.srcPath + '/main.scss';
+config.stylesSrc = config.srcPath + '/**/*.scss';
+config.angularTemplatesSrc = [config.srcPath + '/**/*.html', '!' + config.indexSrc];
 config.imagesSrc = config.resPath + '/images/**/*.+(png|jpg|gif)';
 config.mediaSrc = [config.resPath + '/**', '!' + config.imagesSrc];
 config.iconsSrc = config.resPath + '/images/icons/*.svg';
@@ -83,11 +91,11 @@ config.buildTasks = [
   'vendor-scripts',
   'vendor-styles',
   'angular-templates',
-  'svg-icons',
-  'index-templating',
+  'index',
   'copy-media',
   'copy-device-icons',
-  'compress-images'
+  'compress-images',
+  'data'
 ];
 
 config.host = '0.0.0.0';
