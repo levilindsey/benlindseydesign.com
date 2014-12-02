@@ -1,3 +1,21 @@
-nav-bar {
-  display: block;
+$footer-height: 40px;
+
+bld-footer {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  height: $footer-height;
+  margin-top: 60px;
+
+  font-size: font-size(m);
+
+  a {
+    margin: 0 20px;
+  }
+
+  .svg-icon {
+    height: $footer-height;
+    width: $footer-height;
+  }
 }

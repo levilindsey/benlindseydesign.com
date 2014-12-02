@@ -7,6 +7,7 @@
     return {
       restrict: 'E',
       scope: {
+        currentState: '@'
       },
       templateUrl: 'components/nav-bar/nav-bar.html',
       link: link

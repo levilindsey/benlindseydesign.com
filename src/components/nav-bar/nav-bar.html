@@ -1,7 +1,12 @@
 <ul>
-  <li ng-repeat="item in navBarItems">
-    <a ng-attr-ui-sref="{{item.ref}}">
+  <li ng-repeat="item in navBarItems"
+      ng-class="{selected: currentState === item.ref}">
+    <a ng-if="currentState !== item.ref"
+       ng-attr-ui-sref="{{item.ref}}">
       {{item.label}}
     </a>
+    <span ng-if="currentState === item.ref">
+      {{item.label}}
+    </span>
   </li>
 </ul>

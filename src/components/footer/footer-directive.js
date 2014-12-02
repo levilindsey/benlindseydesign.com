@@ -1,21 +1,20 @@
 (function () {
-  angular.module('bldNavBarDirective', [])
+  angular.module('bldFooterDirective', [])
 
-    .directive('bldNavBar', bldNavBar);
+    .directive('bldFooter', bldFooter);
 
-  function bldNavBar(navBarItems) {
+  function bldFooter() {
     return {
       restrict: 'E',
       scope: {
       },
-      templateUrl: 'components/nav-bar/nav-bar.html',
+      templateUrl: 'components/footer/footer.html',
       link: link
     };
 
     // ---  --- //
 
     function link(scope, element, attrs) {
-      scope.navBarItems = navBarItems;
     }
   }
 })();

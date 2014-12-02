@@ -15,6 +15,7 @@
 //  'bldSomeService',
 
     // Components
+    'bldFooterDirective',
     'bldLogoCircleDirective',
     'bldNavBarDirective',
     'bldSvgIconDirective',
