@@ -1,0 +1,13 @@
+<h1>Nothing here!</h1>
+
+<p ng-if="pageMissing.errorMessage">
+  {{pageMissing.errorMessage}}
+</p>
+
+<p ng-if="!pageMissing.errorMessage && pageMissing.failedUrl">
+  There is no page at {{pageMissing.failedUrl}}.
+</p>
+
+<p ng-if="!pageMissing.errorMessage && !pageMissing.failedUrl">
+  The page you requested does not exist.
+</p>

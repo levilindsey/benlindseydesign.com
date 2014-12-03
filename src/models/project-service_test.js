@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Service: Post', function () {
+describe('Service: Project', function () {
 
   beforeEach(module('bldApp'));
 

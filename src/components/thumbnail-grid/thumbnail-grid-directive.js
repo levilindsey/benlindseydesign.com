@@ -7,6 +7,7 @@
     return {
       restrict: 'E',
       scope: {
+        posts: '='
       },
       templateUrl: 'components/thumbnail-grid/thumbnail-grid.html',
       link: link

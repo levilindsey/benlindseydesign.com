@@ -5,18 +5,21 @@
 
     .constant('navBarItems', [
       {
-        label: 'Projects',
-        ref: 'projects'
-      },
-      {
         label: 'Welcome',
         ref: 'welcome'
+      },
+      {
+        label: 'Projects',
+        ref: 'projects'
       },
       {
         label: 'Writings',
         ref: 'writings'
       }
     ])
+
+    .constant('projectDataUrl', '/project-data.min.json')
+    .constant('blogDataUrl', '/blog-data.min.json')
 
     .constant('youtubeVideoBaseUrl', '//www.youtube.com/embed')
     .constant('youtubeThumbnailBaseUrl', 'http://img.youtube.com/vi')

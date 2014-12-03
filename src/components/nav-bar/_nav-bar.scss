@@ -2,7 +2,7 @@ $nav-bar-height: 42px;
 $selected-tab-border-width: 4px;
 
 bld-nav-bar {
-  @include normal-shadow();
+  @include card();
   display: block;
   height: $nav-bar-height + $selected-tab-border-width * 2;
   line-height: $nav-bar-height;
@@ -13,6 +13,7 @@ bld-nav-bar {
   ul {
     display: flex;
     justify-content: space-around;
+    padding-left: $logo-circle-diameter - $logo-circle-offset;
   }
 
   li {

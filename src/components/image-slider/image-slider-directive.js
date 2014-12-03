@@ -7,6 +7,8 @@
     return {
       restrict: 'E',
       scope: {
+        images: '=',
+        videos: '='
       },
       templateUrl: 'components/image-slider/image-slider.html',
       link: link

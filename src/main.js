@@ -11,8 +11,7 @@
     // Miscellaneous
     'bldConstants',
     'bldRoutes',
-//  'bldSomeFilter',
-//  'bldSomeService',
+    'bldDateStringFilter',
 
     // Components
     'bldImageSliderDirective',
@@ -26,20 +25,22 @@
 
     // Models
     'bldBlogEntryService',
-    'bldPostService',
+    'bldProjectService',
 
     // Routes
     'bldBlogPostController',
-    'bldHomeController',
+    'bldPageMissingController',
     'bldProjectController',
     'bldProjectsController',
     'bldWelcomeController',
     'bldWritingsController'
   ])
 
-    .run(function ($rootScope) {
+    .run(function ($rootScope, Project, BlogEntry) {
       $rootScope.routeState = {};
 
-      // TODO:
+      // Pre-fetch data
+      Project.getData();
+      BlogEntry.getData();
     });
 })();

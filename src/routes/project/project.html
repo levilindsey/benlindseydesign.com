@@ -1,1 +1,19 @@
-Projects page forthcoming
+<div class="date"
+     ng-if="project.projectDatum.date">
+  {{project.projectDatum.date | bldDateString}}
+</div>
+
+<h1>
+  {{project.projectDatum.title}}
+</h1>
+
+<bld-image-slider images="project.projectDatum.images"
+                  videos="project.projectDatum.videos">
+</bld-image-slider>
+
+<ul class="categories"
+    ng-if="project.projectDatum.categories">
+  <li ng-repeat="category in project.projectDatum.categories">
+    {{category}}
+  </li>
+</ul>

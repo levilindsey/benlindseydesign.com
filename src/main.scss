@@ -21,6 +21,7 @@ $colors: (
   natural-3: #835913,
   natural-4: #e2b844,
   natural-5: #c1513c,
+  natural-extra: #f5e8d0,
 
   soft-1: #3d3c3e,
   soft-2: #50505a,
@@ -42,6 +43,10 @@ $font-sizes: (
   l: 22px,
   xl: 32px,
 );
+
+$logo-circle-diameter: 180px;
+$logo-circle-offset: $logo-circle-diameter / 3;
+$nav-bar-gap: 30px;
 
 @font-face {
   font-family: 'Basque';
@@ -70,6 +75,20 @@ $font-sizes: (
   box-shadow: 0 0 14px 0 rgba(color(gray-1), 0.3);
 }
 
+@mixin high-shadow() {
+  box-shadow: 0 0 28px 0 rgba(color(gray-1), 0.3);
+}
+
+@mixin low-shadow() {
+  box-shadow: 0 0 6px 0 rgba(color(gray-1), 0.3);
+}
+
+@mixin card() {
+  @include normal-shadow();
+  border-radius: 2px;
+  background-color: color(gray-5);
+}
+
 // --- General styles --- //
 
 ul, ol, dl, dd, dt, li, div, body, p, form, hr, h1, h2, h3, h4, h5, img, button {
@@ -85,19 +104,27 @@ ul {
 
 html {
   font-size: font-size(m);
-  line-height: font-size(m);
 }
 
 body {
   @include helvetica-stack();
-  padding: 80px 0 120px 0;
+  padding: 80px $nav-bar-gap 120px;
   color: color(gray-1);
-  background-color: color(gray-5);
+  background-color: color(natural-extra);
+//  background-image: url('/images/paper-1.jpg');
 }
 
 h1, h2, h3, h4, h5 {
   text-align: center;
   font-family: Basque, sans-serif;
+}
+
+h1 {
+  margin: 30px 0;
+}
+
+h2, h3, h4, h5 {
+  margin: 20px 0;
 }
 
 a {
@@ -106,7 +133,8 @@ a {
   transition: color 0.2s;
 }
 a:visited {
-  color: color(natural-3);
+  color: color(natural-1);
+//  color: color(natural-3);
 }
 a:hover {
   color: color(natural-2);
@@ -118,15 +146,19 @@ a:active {
 }
 
 #content-column {
-  max-width: 1000px;
+  max-width: 900px;
   margin: auto;
 }
 
 #route-view {
-  @include normal-shadow();
+  @include card();
   min-height: 700px;
-  margin-top: 30px;
+  margin-top: $nav-bar-gap;
   padding: 40px;
+}
+
+#main-header {
+  position: relative;
 }
 
 // --- Include all partials --- //
@@ -140,6 +172,7 @@ a:active {
 @import 'components/toast/toast';
 
 @import 'routes/blog-post/blog-post';
+@import 'routes/page-missing/page-missing';
 @import 'routes/project/project';
 @import 'routes/projects/projects';
 @import 'routes/welcome/welcome';

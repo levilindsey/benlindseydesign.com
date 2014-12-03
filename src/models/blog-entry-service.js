@@ -1,41 +1,52 @@
 (function () {
-  angular.module('bldDataNameService', [])
-
-    .constant('blogDataUrl', '/data.min.json')// TODO: add the actual file name
+  angular.module('bldBlogEntryService', [])
 
     .factory('BlogEntry', BlogEntry);
 
-  function BlogEntry($http, blogDataUrl) {
+  function BlogEntry($http, blogDataUrl, youtubeVideoBaseUrl, youtubeThumbnailBaseUrl, vimeoVideoBaseUrl) {
     var BlogEntry;
 
     var combinedMetadata = {};
     var collectionMetadata = {};
     var blogData = [];
+    var fetchPromise = null;
 
     BlogEntry = {
-      fetchData: fetchData,
       getData: getData
     };
 
     // ---  --- //
 
+    /**
+     * @returns {Promise}
+     */
     function getData() {
-      return blogData;
+      return fetchPromise || fetchData();
     }
 
-    function fetchData(parameters) {
-      return $http.get(blogDataUrl + '/')
-        .then(function (response) {
-          combinedMetadata = JSON.parse(response);
-
-          collectionMetadata = combinedMetadata.collectionMetadata;
-          blogData = combinedMetadata.posts;
-
-          updatePostsSrcUrls();
-        })
+    /**
+     * @returns {Promise}
+     */
+    function fetchData() {
+      fetchPromise = $http.get(blogDataUrl)
+        .then(parseResponseData)
         .catch(function (error) {
           console.error(error);
         });
+
+      return fetchPromise;
+
+      // ---  --- //
+
+      function parseResponseData(response) {
+        combinedMetadata = response.data;
+        collectionMetadata = combinedMetadata.collectionMetadata;
+        blogData = combinedMetadata.posts;
+
+        updatePostsSrcUrls();
+
+        return blogData;
+      }
     }
 
     function updatePostsSrcUrls() {
@@ -61,11 +72,11 @@
         function updateSrcVideoMetadata(videoMetadatum) {
           switch (videoMetadatum.videoHost) {
             case 'youtube':
-              videoMetadatum.videoSrc = config.youtubeVideoBaseUrl + '/' + videoMetadatum.id + '?enablejsapi=1';
-              videoMetadatum.thumbnailSrc = config.youtubeThumbnailBaseUrl + '/' + videoMetadatum.id + '/default.jpg';
+              videoMetadatum.videoSrc = youtubeVideoBaseUrl + '/' + videoMetadatum.id + '?enablejsapi=1';
+              videoMetadatum.thumbnailSrc = youtubeThumbnailBaseUrl + '/' + videoMetadatum.id + '/default.jpg';
               break;
             case 'vimeo':
-              videoMetadatum.videoSrc = config.vimeoVideoBaseUrl + '/' + videoMetadatum.id;
+              videoMetadatum.videoSrc = vimeoVideoBaseUrl + '/' + videoMetadatum.id;
               videoMetadatum.thumbnailSrc = null;
               break;
             default:

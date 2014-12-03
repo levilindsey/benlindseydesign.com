@@ -1,3 +1,32 @@
-logo-circle {
-  display: block;
+$logo-circle-icon-width: $logo-circle-diameter * 0.667;
+
+bld-logo-circle {
+  @include card();
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: -$logo-circle-offset;
+  left: -$logo-circle-offset;
+
+  width: $logo-circle-diameter;
+  height: $logo-circle-diameter;
+
+  border-radius: 50%;
+
+  background-color: color(natural-2);
+  background-image: url('/images/paper-2.jpg');
+
+  transition: box-shadow 0.2s;
+
+  .svg-icon {
+    width: $logo-circle-icon-width;
+    height: $logo-circle-icon-width;
+  }
+}
+
+bld-logo-circle:hover {
+  @include low-shadow();
 }

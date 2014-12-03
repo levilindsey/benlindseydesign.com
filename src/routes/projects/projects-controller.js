@@ -3,7 +3,9 @@
 
     .controller('ProjectsCtrl', ProjectsCtrl);
 
-  function ProjectsCtrl() {
+  function ProjectsCtrl(projectData) {
     var projects = this;
+
+    projects.projectData = projectData;
   }
 })();

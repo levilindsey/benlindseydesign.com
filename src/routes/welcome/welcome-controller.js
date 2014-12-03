@@ -3,9 +3,7 @@
 
     .controller('WelcomeCtrl', WelcomeCtrl);
 
-  function WelcomeCtrl(appName) {
+  function WelcomeCtrl() {
     var home = this;
-
-    home.appName = appName;
   }
 })();
