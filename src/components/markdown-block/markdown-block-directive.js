@@ -9,7 +9,6 @@
       scope: {
         markdownText: '@'
       },
-      templateUrl: 'components/markdown-block/markdown-block.html',
       link: link
     };
 
