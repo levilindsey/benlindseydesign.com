@@ -66,7 +66,9 @@ config.vendorScriptsSrc = [
   config.bowerPath + '/angular-aria/angular-aria.js',
   config.bowerPath + '/angular-material/angular-material.js',
   config.bowerPath + '/angular-ui-router/release/angular-ui-router.js',
-  config.bowerPath + '/hammerjs/hammer.js'
+  config.bowerPath + '/hammerjs/hammer.js',
+  config.bowerPath + '/showdown/compressed/showdown.js',
+  config.bowerPath + '/showdown/compressed/extensions/github.js'
 ];
 config.vendorScriptsMinSrc = [
   config.bowerPath + '/angular/angular.min.js',

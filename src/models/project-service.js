@@ -2,12 +2,8 @@
   /**
    * @typedef {Object} ProjectData
    * @property {String} id
-   * @property {String} titleShort
-   * @property {String} titleLong
-   * @property {Array.<String>} urls
-   * @property {String} jobTitle
+   * @property {String} title
    * @property {String} date
-   * @property {Array.<String>} categories
    * @property {Array.<ImageData>} images
    * @property {Array.<VideoData>} videos
    * @property {String} content An extended description of the project in markdown syntax.

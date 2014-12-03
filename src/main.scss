@@ -108,10 +108,13 @@ html {
 
 body {
   @include helvetica-stack();
-  padding: 80px $nav-bar-gap 120px;
+  padding: 0 $nav-bar-gap;
   color: color(gray-1);
+}
+
+body, html {
   background-color: color(natural-extra);
-//  background-image: url('/images/paper-1.jpg');
+  //  background-image: url('/images/paper-1.jpg');
 }
 
 h1, h2, h3, h4, h5 {
@@ -125,6 +128,10 @@ h1 {
 
 h2, h3, h4, h5 {
   margin: 20px 0;
+}
+
+p {
+  margin: 30px 0;
 }
 
 a {
@@ -147,7 +154,7 @@ a:active {
 
 #content-column {
   max-width: 900px;
-  margin: auto;
+  margin: 80px auto 120px;
 }
 
 #route-view {
@@ -166,6 +173,7 @@ a:active {
 @import 'components/footer/footer';
 @import 'components/image-slider/image-slider';
 @import 'components/logo-circle/logo-circle';
+@import 'components/markdown-block/markdown-block';
 @import 'components/nav-bar/nav-bar';
 @import 'components/svg-icon/svg-icon';
 @import 'components/thumbnail-grid/thumbnail-grid';

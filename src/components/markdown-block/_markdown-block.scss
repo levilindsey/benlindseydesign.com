@@ -1,0 +1,15 @@
+bld-markdown-block {
+  h1, h2, h3, h4, h5 {
+    margin: 20px 0;
+    text-align: left;
+  }
+
+  blockquote {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1px 16px 1px 44px;
+    font-style: italic;
+    background-color: color(gray-4);
+    border-radius: 2px;
+  }
+}

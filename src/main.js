@@ -17,6 +17,7 @@
     'bldImageSliderDirective',
     'bldFooterDirective',
     'bldLogoCircleDirective',
+    'bldMarkdownBlockDirective',
     'bldNavBarDirective',
     'bldSvgIconDirective',
     'bldThumbnailGridDirective',

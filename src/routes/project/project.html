@@ -11,9 +11,4 @@
                   videos="project.projectDatum.videos">
 </bld-image-slider>
 
-<ul class="categories"
-    ng-if="project.projectDatum.categories">
-  <li ng-repeat="category in project.projectDatum.categories">
-    {{category}}
-  </li>
-</ul>
+<bld-markdown-block markdown-text="{{project.projectDatum.content}}"></bld-markdown-block>
