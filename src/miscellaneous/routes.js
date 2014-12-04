@@ -4,7 +4,8 @@
     .config(config)
     .run(run);
 
-  function config($stateProvider, $urlRouterProvider) {
+  function config($stateProvider, $urlRouterProvider, $locationProvider) {
+    $locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/page-missing');
 
     // These values need to be available before any route is rendered

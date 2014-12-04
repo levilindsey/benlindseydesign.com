@@ -3,6 +3,7 @@ $selected-tab-border-width: 4px;
 
 bld-nav-bar {
   @include card();
+  @include title-stack();
   display: block;
   height: $nav-bar-height + $selected-tab-border-width * 2;
   line-height: $nav-bar-height;
@@ -17,9 +18,11 @@ bld-nav-bar {
   }
 
   li {
-    margin: 0 20px;
+    margin: 0 5px;
     padding: 0 8px;
-
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     font-size: font-size(l);
   }
 
@@ -29,5 +32,17 @@ bld-nav-bar {
 
   a:hover {
     text-decoration: none;
+  }
+
+  @media (max-width: $medium-screen-width) {
+    li {
+      font-size: font-size(m);
+    }
+  }
+
+  @media (max-width: $small-screen-width) {
+    li {
+      font-size: font-size(s);
+    }
   }
 }

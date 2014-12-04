@@ -44,6 +44,9 @@ $font-sizes: (
   xl: 32px,
 );
 
+$small-screen-width: 600px;
+$medium-screen-width: 800px;
+
 $logo-circle-diameter: 180px;
 $logo-circle-offset: $logo-circle-diameter / 3;
 $nav-bar-gap: 25px;
@@ -65,6 +68,11 @@ $page-padding: 50px;
 
 @function font-size($size-name) {
   @return map-get($font-sizes, $size-name);
+}
+
+@mixin title-stack() {
+  font-family: Basque, sans-serif;
+  font-weight: bold;
 }
 
 @mixin helvetica-stack() {
@@ -119,8 +127,8 @@ body, html {
 }
 
 h1, h2, h3, h4, h5 {
+  @include title-stack();
   text-align: center;
-  font-family: Basque, sans-serif;
 }
 
 h1 {
@@ -128,11 +136,20 @@ h1 {
 }
 
 h2, h3, h4, h5 {
-  margin: 20px 0;
+  margin: 30px 0;
+  text-align: left;
 }
 
 p {
-  margin: 30px 0;
+  margin: 20px 0;
+}
+
+blockquote {
+  margin: 20px 0;
+  padding: 1px 16px 1px 44px;
+  font-style: italic;
+  background-color: color(gray-4);
+  border-radius: 2px;
 }
 
 a {
@@ -160,13 +177,14 @@ a:active {
 
 #route-view {
   @include card();
-  min-height: 700px;
+  min-height: 600px;
   margin-top: $nav-bar-gap;
   padding: $page-padding;
 }
 
 #main-header {
   position: relative;
+  z-index: 1;
 }
 
 // --- Include all partials --- //

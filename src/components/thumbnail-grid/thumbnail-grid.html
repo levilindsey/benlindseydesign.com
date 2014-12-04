@@ -1,9 +1,8 @@
-<h2>Thumbnail grid in progress</h2>
-
-<ul>
-  <li ng-repeat="post in posts">
-    <a ui-sref="project({projectId: post.id})">
-      {{post.title}}
-    </a>
-  </li>
-</ul>
+<a ng-repeat="post in posts"
+   ui-sref="project({projectId: post.id})"
+   ng-style="{'background-image': 'url(' + post.thumbnailSrc + ')'}">
+  <span class="screen"></span>
+  <span class="title">
+    {{post.title}}
+  </span>
+</a>

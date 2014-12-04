@@ -1,5 +1,9 @@
 .project-route {
+  position: relative;
+
   .date {
+    position: absolute;
+    right: $page-padding;
     text-align: right;
     color: color(gray-2);
   }

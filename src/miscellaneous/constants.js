@@ -5,7 +5,7 @@
 
     .constant('navBarItems', [
       {
-        label: 'Welcome',
+        label: 'Artist Statement',
         ref: 'welcome'
       },
       {

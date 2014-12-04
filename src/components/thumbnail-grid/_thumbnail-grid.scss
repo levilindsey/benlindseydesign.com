@@ -1,3 +1,82 @@
+$thumbnail-margin: 1%;
+$thumbnail-width: 50% - $thumbnail-margin * 2;
+
 bld-thumbnail-grid {
-  display: block;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+  > a {
+    @include card();
+    position: relative;
+    flex: 0 0 $thumbnail-width;
+    width: $thumbnail-width;
+    height: 0;
+    padding-bottom: $thumbnail-width;
+    margin: $thumbnail-margin 0;
+    overflow: hidden;
+    font-size: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transition-property: box-shadow;
+    transition-duration: 0.2s;
+
+    > .screen {
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      background-color: color(black);
+    }
+
+    > .title {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 1em;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      text-align: center;
+      vertical-align: middle;
+      font-size: font-size(l);
+      font-weight: bold;
+      color: color(gray-5);
+    }
+
+    > span {
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+  }
+
+  > a:hover {
+    @include high-shadow();
+  }
+
+  > a:active {
+    @include low-shadow();
+    transition-duration: 0.05s;
+  }
+
+  > a:hover > .screen {
+    opacity: 0.5;
+  }
+
+  > a:hover > .title {
+    opacity: 1;
+    color: color(gray-5);
+  }
+
+  @media (max-width: $medium-screen-width) {
+  }
+
+  @media (max-width: $small-screen-width) {
+    > a {
+      flex: 0 0 100%;
+      width: 100%;
+      padding-bottom: 100%;
+    }
+  }
 }
