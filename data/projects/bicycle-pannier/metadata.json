@@ -4,12 +4,16 @@
   "date": "2014",
   "images": [
     {
-      "fileName": "filename.png",
+      "fileName": "image1.png",
       "description": "Image description 1."
     },
     {
-      "fileName": "filename.png",
+      "fileName": "image2.png",
       "description": "Image description 2."
+    },
+    {
+      "fileName": "image3.png",
+      "description": "Image description 3."
     }
   ],
   "videos": [],

@@ -46,7 +46,8 @@ $font-sizes: (
 
 $logo-circle-diameter: 180px;
 $logo-circle-offset: $logo-circle-diameter / 3;
-$nav-bar-gap: 30px;
+$nav-bar-gap: 25px;
+$page-padding: 50px;
 
 @font-face {
   font-family: 'Basque';
@@ -161,7 +162,7 @@ a:active {
   @include card();
   min-height: 700px;
   margin-top: $nav-bar-gap;
-  padding: 40px;
+  padding: $page-padding;
 }
 
 #main-header {

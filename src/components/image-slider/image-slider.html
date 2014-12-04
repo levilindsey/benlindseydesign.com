@@ -1,1 +1,51 @@
+<div class="sliders">
+  <div class="main-media-ribbon"
+       ng-style="{'left': -currentIndex * 100 + '%'}">
+    <!-- TODO: change the horizontal image positioning to be cleaner; I shouldn't need to calculate left positions -->
+    <div ng-repeat="item in metadata"
+         ng-style="{'background-image': !item.isVideo && 'url(' + item.src + ')' || 'none', 'left': $index * 100 + '%'}">
+      <iframe ng-if="item.isVideo"
+              src="{{item.videoSrc}}"
+              allowfullscreen
+              frameborder="0"></iframe>
+    </div>
+  </div>
 
+  <div class="thumbnails-ribbon"
+       ng-if="metadata.length > 1"
+       ng-style="{'left': -currentIndex * thumbnailWidth + 'px'}">
+    <div class="thumbnail"
+         ng-repeat="item in metadata"
+         ng-style="{'background-image': 'url(' + item.thumbnailSrc + ')'}"
+         ng-class="{'selected': currentIndex === $index}">
+      <div class="thumbnail-screen"
+           ng-click="goToIndex($index)"></div>
+    </div>
+  </div>
+
+  <div class="buttons"
+       ng-if="metadata.length && !metadata[currentIndex].isVideo">
+    <div class="previous button"
+         ng-click="goToPrevious()"
+         ng-if="currentIndex > 0">
+      <div>
+        &#10094;
+      </div>
+    </div>
+
+    <div class="next button"
+         ng-click="goToNext()"
+         ng-if="currentIndex < metadata.length - 1">
+      <div>
+        &#10095;
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="captions"
+     ng-class="{'selected': !isTransitioning}">
+  <p>
+    {{captionText}}
+  </p>
+</div>
