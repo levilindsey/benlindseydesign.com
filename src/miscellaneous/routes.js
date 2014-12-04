@@ -27,7 +27,7 @@
         resolve: dataResolve
       })
       .state('welcome', {
-        url: '',
+        url: '/',
         templateUrl: 'routes/welcome/welcome.html',
         controller: 'WelcomeCtrl',
         controllerAs: 'welcome',
