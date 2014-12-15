@@ -1,9 +1,9 @@
 ## User Profile
 
-James is a sophitcated twenty-something, looking to make  his mark at the office, and his town. He respects classic sensibilities, but isn’t restricted by them. Wardrobe is an extension of the self, and James has a pretty great self. 
+James is a sophisticated twenty-something, looking to make his mark at the office, and his town. He respects classic sensibilities, but isn’t restricted by them. Wardrobe is an extension of the self, and James has a pretty great self. 
 
 > Apparel oft proclaims the man.  
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\- William Shakespeare
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\- William Shakespeare
 
 
 ## Brand Creation
