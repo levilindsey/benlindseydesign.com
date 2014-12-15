@@ -5,16 +5,16 @@
 
     .constant('navBarItems', [
       {
-        label: 'Artist Statement',
-        ref: 'welcome'
-      },
-      {
         label: 'Projects',
         ref: 'projects'
       },
       {
         label: 'Writings',
         ref: 'writings'
+      },
+      {
+        label: 'Artist Statement',
+        ref: 'welcome'
       }
     ])
 

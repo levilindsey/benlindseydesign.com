@@ -129,6 +129,7 @@ body, html {
 h1, h2, h3, h4, h5 {
   @include title-stack();
   text-align: center;
+  color: color(natural-2);
 }
 
 h1 {
@@ -153,16 +154,16 @@ blockquote {
 }
 
 a {
-  color: color(natural-1);
+  color: color(natural-2);
   text-decoration: none;
   transition: color 0.2s;
 }
 a:visited {
-  color: color(natural-1);
+  color: color(natural-2);
 //  color: color(natural-3);
 }
 a:hover {
-  color: color(natural-2);
+  color: color(natural-1);
   text-decoration: underline;
 }
 a:active {
