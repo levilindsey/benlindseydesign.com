@@ -4,16 +4,80 @@
   "date": "2014",
   "images": [
     {
-      "fileName": "image1.png",
-      "description": "Image description 1."
+      "fileName": "shoe1.jpg",
+      "description": "Image description forthcoming."
     },
     {
-      "fileName": "image2.png",
-      "description": "Image description 2."
+      "fileName": "shoe13.jpg",
+      "description": "Image description forthcoming."
     },
     {
-      "fileName": "image3.png",
-      "description": "Image description 3."
+      "fileName": "shoe14.jpg",
+      "description": "Image description forthcoming."
+    },
+    {
+      "fileName": "Side-Profile-blue-white.jpg",
+      "description": "Image description forthcoming."
+    },
+    {
+      "fileName": "Top-Profile-blue-white.jpg",
+      "description": "Image description forthcoming."
+    },
+    {
+      "fileName": "Back-Profile-white-blue.jpg",
+      "description": "Image description forthcoming."
+    },
+    {
+      "fileName": "Bottom-Profile-blue-white.jpg",
+      "description": "Image description forthcoming."
+    },
+    {
+      "fileName": "Perspective-Profile-blue-white.jpg",
+      "description": "Image description forthcoming."
+    },
+    {
+      "fileName": "shoe2.jpg",
+      "description": "Image description forthcoming."
+    },
+    {
+      "fileName": "shoe3.jpg",
+      "description": "Image description forthcoming."
+    },
+    {
+      "fileName": "shoe4.jpg",
+      "description": "Image description forthcoming."
+    },
+    {
+      "fileName": "shoe5.jpg",
+      "description": "Image description forthcoming."
+    },
+    {
+      "fileName": "shoe6.jpg",
+      "description": "Image description forthcoming."
+    },
+    {
+      "fileName": "shoe7.jpg",
+      "description": "Image description forthcoming."
+    },
+    {
+      "fileName": "shoe8.jpg",
+      "description": "Image description forthcoming."
+    },
+    {
+      "fileName": "shoe9.jpg",
+      "description": "Image description forthcoming."
+    },
+    {
+      "fileName": "shoe10.jpg",
+      "description": "Image description forthcoming."
+    },
+    {
+      "fileName": "shoe11.jpg",
+      "description": "Image description forthcoming."
+    },
+    {
+      "fileName": "shoe12.jpg",
+      "description": "Image description forthcoming."
     }
   ],
   "videos": [],

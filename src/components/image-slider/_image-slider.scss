@@ -47,6 +47,7 @@ bld-image-slider {
 
   .thumbnails-ribbon {
     position: relative;
+    width: 1000000px;
     height: $thumbnailHeight;
     margin-left: calc(50% - #{$thumbnailWidth / 2});
     padding-top: $thumbnailRibbonPadding;

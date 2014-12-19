@@ -3,8 +3,6 @@
 
     .controller('ProjectCtrl', ProjectCtrl);
 
-  // TODO: sort post items by date (actually, this should be part of the build process...)
-
   function ProjectCtrl($state, $stateParams, projectData) {
     var project = this;
 

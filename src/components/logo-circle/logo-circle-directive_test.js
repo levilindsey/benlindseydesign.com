@@ -22,8 +22,6 @@ describe('Directive: bld-nav-bar', function () {
   // ---  --- //
 
   it('should ...', function () {
-    // TODO:
-
-    expect(true).toBeTruthy();
+    expect().toBeDefined();// TODO:
   });
 });

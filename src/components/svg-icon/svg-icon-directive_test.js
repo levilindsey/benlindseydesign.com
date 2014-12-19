@@ -26,12 +26,11 @@ describe('Directive: bld-svg-icon', function () {
   // ---  --- //
 
   it('should display the SVG use tag properly', function () {
-    // TODO: fix this unit test
     //var element = compileSvgIcon(iconId);
     //var child = element.children();
     //
     //expect(child[0].tagName).toBe('use');
     //expect(child.attr('xlink:href')).toMatch(new RegExp(iconId));
-    expect(true).toBeTruthy();
+    expect().toBeDefined();// TODO:
   });
 });

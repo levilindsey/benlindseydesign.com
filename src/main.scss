@@ -188,6 +188,19 @@ a:active {
   z-index: 1;
 }
 
+#under-construction {
+  @include card();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  margin-bottom: 90px;
+  padding: 30px;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
 // --- Include all partials --- //
 
 @import 'components/footer/footer';
