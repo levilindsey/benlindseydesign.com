@@ -1,6 +1,10 @@
 .project-route {
   position: relative;
 
+  h1 {
+    @include card-header();
+  }
+
   .date {
     position: absolute;
     right: $page-padding;

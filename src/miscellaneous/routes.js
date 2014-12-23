@@ -6,7 +6,8 @@
 
   function config($stateProvider, $urlRouterProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
-    $urlRouterProvider.otherwise('/page-missing');
+    //$urlRouterProvider.otherwise('/page-missing');
+    $urlRouterProvider.otherwise('/projects');
 
     // These values need to be available before any route is rendered
     var dataResolve = {
@@ -27,7 +28,7 @@
         resolve: dataResolve
       })
       .state('welcome', {
-        url: '/',
+        url: '/artist-statement',
         templateUrl: 'routes/welcome/welcome.html',
         controller: 'WelcomeCtrl',
         controllerAs: 'welcome',

@@ -98,6 +98,11 @@ $page-padding: 50px;
   background-color: color(gray-5);
 }
 
+@mixin card-header() {
+  @include card();
+  padding: 0.5em;
+}
+
 // --- General styles --- //
 
 ul, ol, dl, dd, dt, li, div, body, p, form, hr, h1, h2, h3, h4, h5, img, button {
@@ -146,6 +151,7 @@ p {
 }
 
 blockquote {
+  @include card();
   margin: 20px 0;
   padding: 1px 16px 1px 44px;
   font-style: italic;

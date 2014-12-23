@@ -2,8 +2,8 @@
   "baseUrl": "https://s3-us-west-2.amazonaws.com/ben-portfolio-media",
   "thumbnailName": "thumbnail.png",
   "thumbnailDimensions": {
-    "width": 256,
-    "height": 256
+    "width": 400,
+    "height": 400
   },
   "logoName": "logo.png"
 }

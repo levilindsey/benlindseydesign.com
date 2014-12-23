@@ -11,6 +11,7 @@ bld-image-slider {
   display: block;
 
   .sliders {
+    @include card();
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -144,6 +145,7 @@ bld-image-slider {
   }
 
   .captions {
+    @include card();
     margin: 3px $page-padding 26px;
     padding: 18px;
     font-size: 14px;
