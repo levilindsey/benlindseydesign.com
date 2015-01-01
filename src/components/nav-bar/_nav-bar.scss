@@ -33,16 +33,36 @@ bld-nav-bar {
   a:hover {
     text-decoration: none;
   }
+}
 
-  @media (max-width: $medium-screen-width) {
+@media (max-width: $medium-screen-width) {
+  bld-nav-bar {
     li {
       font-size: font-size(m);
     }
   }
+}
 
-  @media (max-width: $small-screen-width) {
+@media (max-width: $small-screen-width) {
+  bld-nav-bar {
+    height: auto;
+    padding-bottom: $selected-tab-border-width;
+
+    ul {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
     li {
-      font-size: font-size(s);
+      height: $nav-bar-height;
+      margin-left: 24px;
+      font-size: font-size(l);
+    }
+
+    li.selected {
+      padding-left: 4px;
+      border-left: $selected-tab-border-width solid color(natural-5);
+      border-bottom-width: 0;
     }
   }
 }

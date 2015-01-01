@@ -30,3 +30,9 @@ bld-logo-circle {
 bld-logo-circle:hover {
   @include low-shadow();
 }
+
+@media (max-width: $small-screen-width) {
+  bld-logo-circle {
+    top: -$logo-circle-offset + 36px;
+  }
+}
