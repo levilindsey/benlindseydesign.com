@@ -86,61 +86,55 @@ bld-image-slider {
   }
 
   .button {
-    color: #000000;
+    color: #888888;
     transition: color 0.2s;
   }
 
   .button:hover {
-    color: #999999;
+    color: #dddddd;
   }
 
   .button:active {
-    color: #FFFFFF;
+    color: #333333;
   }
 
-  .previous.button {
+  .previous.button,
+  .next.button {
     position: absolute;
     top: 0;
-    left: 0;
-    width: calc(33.33% - #{$prevNextButtonPadding});
     height: 100%;
     cursor: pointer;
 
-    div {
+    .svg-icon {
       position: absolute;
       top: 0;
       bottom: 0;
-      left: 0;
       margin: auto;
-      height: 100px;
-      line-height: 100px;
-      font-size: 40px;
-      vertical-align: middle;
+      width: 25px + $prevNextButtonPadding;
+      height: 42px;
+    }
+  }
+
+  .previous.button {
+    left: 0;
+    width: calc(33.33% - #{$prevNextButtonPadding});
+
+    .svg-icon {
+      left: 0;
       text-align: left;
       padding-left: $prevNextButtonPadding;
     }
   }
 
   .next.button {
-    position: absolute;
-    top: 0;
     right: 0;
     width: calc(66.67% - #{$prevNextButtonPadding});
-    height: 100%;
-    cursor: pointer;
 
-    div {
-      position: absolute;
-      top: 0;
-      bottom: 0;
+    .svg-icon {
       right: 0;
-      margin: auto;
-      height: 100px;
-      line-height: 100px;
-      font-size: 40px;
-      vertical-align: middle;
       text-align: right;
-      padding-right: $prevNextButtonPadding;
+      padding-left: $prevNextButtonPadding;
+      transform: scaleX(-1);
     }
   }
 
